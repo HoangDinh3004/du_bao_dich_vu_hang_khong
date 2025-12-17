@@ -13,10 +13,9 @@ st.write("Nhập thông tin chuyến bay ở cột bên trái để xem AI dự 
 # --- 2. LOAD MÔ HÌNH (Đã sửa lỗi đường dẫn và gọi hàm) ---
 @st.cache_resource
 def load_data():
-    # Điền cứng đường dẫn như bạn đã làm (Rất tốt!)
-    file_path = r"C:\Users\hoang\Downloads\Streamlit\final_lightgbm_model.pkl"
+    # Chỉ cần gọi tên file, vì lát nữa ta sẽ để file này nằm ngay cạnh app.py trên GitHub
+    file_path = "final_lightgbm_model.pkl" 
     
-    # Bỏ try-except đi để xem lỗi thật sự là gì
     loaded_model = joblib.load(file_path)
     return loaded_model
 
